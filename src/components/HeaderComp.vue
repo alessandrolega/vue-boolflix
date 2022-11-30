@@ -4,7 +4,9 @@
       <img src="../assets/Netflix-Logo.wine.svg" alt="">
     </div>
     <div>
-      <input type="text" placeholder="Cerca...">
+      <input type="text" placeholder="Cerca..."
+      v-model="ricercaFilm"
+      @keyup="$emit('nomeEmit', ricercaFilm)">
     </div>
     
     
@@ -13,7 +15,12 @@
 
 <script>
 export default {
-  name: 'HeaderComp'
+  name: 'HeaderComp',
+  data(){
+    return{
+      ricercaFilm: ''
+    }
+  }
   
 }
 </script>
