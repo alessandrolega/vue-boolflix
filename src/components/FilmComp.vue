@@ -33,4 +33,6 @@ import CardComp from './CardComp.vue'
 <style lang="scss" scoped>
 
 
+
+
 </style>

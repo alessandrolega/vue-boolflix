@@ -45,7 +45,7 @@ export default {
 
 #app {
   background-color: #141414;
-  height: 100vh;
+  height: 100%;
 
 
 }

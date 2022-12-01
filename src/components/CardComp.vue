@@ -1,5 +1,6 @@
 <template>
     <div class="card" style="width: 18rem;">
+        <img :src="`http://image.tmdb.org/t/p/w342/${singleFilm.poster_path}`" class="card-img-top" alt="poster">
         <div class="card-body">
             <h5 class="card-title">{{singleFilm.title}}</h5>
             <ul>
@@ -22,6 +23,31 @@
 
 <style lang="scss" scoped>
 
+.card{
+    background-color: #141414;
+    color: white;
+
+}
+
+
+
+.card > img{
+    display: block;
+}
+
+.card-body{
+    display: block;
+    color: white;
+}
+
+.card > img:hover{
+    display: none;
+
+}
+
+.card-body:hover{
+    display: block;
+}
 
 
 </style>
