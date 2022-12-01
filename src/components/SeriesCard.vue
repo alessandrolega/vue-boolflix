@@ -23,10 +23,32 @@
 
 <style lang="scss" scoped>
 
+.card{
+    background-color: #141414;
+}
+
 .card-body{
     display: block;
     background-color: #141414;
     color: white;
+}
+
+.card > img{
+    display: block;
+}
+
+.card-body{
+    display: none;
+    color: white;
+}
+
+.card:hover img{
+    display: none;
+
+}
+
+.card:hover .card-body{
+    display: block;
 }
 
 </style>

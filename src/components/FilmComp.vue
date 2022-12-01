@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class=" d-flex flex-direction-column flex-wrap row-cols-6">
+    <div class="scrollmenu">
+        <div class=" d-flex flex-direction-row row-cols-6">
         <CardComp v-for="(element, index) in filmsData"
         :key="index"
         :singleFilm="element"/>
@@ -31,6 +31,12 @@ import CardComp from './CardComp.vue'
 </script>
 
 <style lang="scss" scoped>
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
 
 
 

@@ -1,9 +1,12 @@
 <template>
-    <div class="d-flex flex-direction-column flex-wrap row-cols-6">
+    <div class="scrollmenu">
+        <div class="d-flex flex-direction-row row-cols-6">
         <SeriesCard v-for="(element, index) in seriesData"
         :key="index"
         :singleSerie="element"/>
     </div>
+    </div>
+    
 </template>
 
 <script>
@@ -23,5 +26,11 @@ import SeriesCard from './SeriesCard.vue'
 </script>
 
 <style lang="scss" scoped>
+
+div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+}
 
 </style>

@@ -42,10 +42,16 @@ export default {
 
 <style lang="scss">
 
+body{
+  background-color: #141414 !important;
+  
+}
+
 
 #app {
-  background-color: #141414;
+  background-color: #141414 !important;
   height: 100%;
+  padding-bottom: 100px;
 
 
 }

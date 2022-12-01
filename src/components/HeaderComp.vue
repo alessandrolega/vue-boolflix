@@ -29,7 +29,7 @@ export default {
 <style scoped lang="scss">
 
 header{
-  height: 10%;
+  height: 100px;
   background-color: #0B0B0B;
   padding: 20px;
 }

@@ -36,16 +36,16 @@
 }
 
 .card-body{
-    display: block;
+    display: none;
     color: white;
 }
 
-.card > img:hover{
+.card:hover img{
     display: none;
 
 }
 
-.card-body:hover{
+.card:hover .card-body{
     display: block;
 }
 
