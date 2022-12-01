@@ -5,7 +5,7 @@
             <h5 class="card-title">{{singleSerie.name}}</h5>
             <ul>
                 <li>{{singleSerie.original_name}}</li>
-                <li>{{singleSerie.original_language}}</li>
+                <li><img class="flag" :src=" `https://www.countryflagicons.com/SHINY/64/${ (singleSerie.original_language == 'en') ? 'GB' : ((singleSerie.original_language == 'ja') ? 'JP' : singleSerie.original_language.toUpperCase())}.png`"></li>
                 <li>{{singleSerie.vote_average}}</li>
             </ul>
         </div>
@@ -22,6 +22,10 @@
 </script>
 
 <style lang="scss" scoped>
+
+.flag{
+    width: 30px;
+}
 
 .card{
     background-color: #141414;
@@ -42,7 +46,7 @@
     color: white;
 }
 
-.card:hover img{
+.card:hover > img{
     display: none;
 
 }
