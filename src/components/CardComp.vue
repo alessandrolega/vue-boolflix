@@ -8,6 +8,7 @@
                 <li>{{singleFilm.original_title}}</li>
                 <li><img class="flag" :src=" `https://www.countryflagicons.com/SHINY/64/${ (singleFilm.original_language == 'en') ? 'GB' : ((singleFilm.original_language == 'ja') ? 'JP' : singleFilm.original_language.toUpperCase())}.png`"></li>
                 <li>{{singleFilm.vote_average}}</li>
+                <li>{{singleFilm.overview}}</li>
 
                  
 

@@ -7,6 +7,7 @@
                 <li>{{singleSerie.original_name}}</li>
                 <li><img class="flag" :src=" `https://www.countryflagicons.com/SHINY/64/${ (singleSerie.original_language == 'en') ? 'GB' : ((singleSerie.original_language == 'ja') ? 'JP' : singleSerie.original_language.toUpperCase())}.png`"></li>
                 <li>{{singleSerie.vote_average}}</li>
+                <li>{{singleSerie.overview}}</li>
             </ul>
         </div>
     </div>
