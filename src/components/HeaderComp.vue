@@ -5,8 +5,8 @@
     </div>
     <div>
       <input type="text" placeholder="Cerca..."
-      v-model="ricercaFilm"
-      @keyup="$emit('nomeEmit', ricercaFilm)">
+      v-model="ricerca"
+      @keyup="$emit('nomeEmit', ricerca)">
     </div>
     
     
@@ -18,7 +18,7 @@ export default {
   name: 'HeaderComp',
   data(){
     return{
-      ricercaFilm: ''
+      ricerca: ''
     }
   }
   

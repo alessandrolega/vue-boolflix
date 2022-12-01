@@ -3,6 +3,11 @@
         <div class="px-5">
             <h3 class="p-4 text-white">FILM</h3>
             <FilmComp :filmsData="propsMain"/>
+            <div>
+                <h3 class="p-4 text-white">SERIE TV</h3>
+                <SeriesComp :seriesData="propsSeries"/>
+            </div>
+            
         </div>
         
         
@@ -12,15 +17,17 @@
 <script>
 
 import FilmComp from './FilmComp.vue'
-// import SeriesComp from './SeriesComp.vue'
+import SeriesComp from './SeriesComp.vue'
 
     export default {
         name: 'MainComp',
         props: {
-            propsMain: Array
+            propsMain: Array,
+            propsSeries: Array
         },
         components:{
-            FilmComp
+            FilmComp,
+            SeriesComp
         },
         methods: {
 

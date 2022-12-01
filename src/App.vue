@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <HeaderComp @nomeEmit="searchMovie"/>
-    <MainComp :propsMain="arrayFilms"/>
+    <HeaderComp @nomeEmit="search"/>
+    <MainComp :propsMain="arrayFilms" :propsSeries="arraySeries"/>
   </div>
 </template>
 
@@ -19,19 +19,23 @@ export default {
   data(){
     return{
       apiKey: '485654aa1a6a37718a70aede92f8e01c',
-      arrayFilms: []
+      arrayFilms: [],
+      arraySeries: []
     }
   },
   methods: {
-    searchMovie(valueSearch){
+    search(valueSearch){
       axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${this.apiKey}&query=${valueSearch}`)
       .then((response)=>{
         this.arrayFilms = response.data.results
-        
-      })
+      });
+
+      axios.get(`https://api.themoviedb.org/3/search/tv?api_key=${this.apiKey}&query=${valueSearch}`)
+      .then((response)=>{
+        this.arraySeries = response.data.results
+      });
 
     },
-    
   }
 }
 </script>
@@ -41,7 +45,8 @@ export default {
 
 #app {
   background-color: #141414;
- height: 100vh;
+  height: 100vh;
+
 
 }
 </style>
